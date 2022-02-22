@@ -436,12 +436,14 @@ function iLoveFruit(fruits) {
  * Lengkapi function untuk menghilangkan nama buah-buahan yang dimulai dengan huruf A
  */
 function removeFruitStartWithALetter(fruits) {
-
+  const indexFruit = fruits.findIndex((fruit) => fruit.startsWith('A'));
+  indexFruit === -1 ? null : fruits.splice(indexFruit, 1);
+  return fruits;
 }
 
 console.log(removeFruitStartWithALetter(["Apple", "Banana"])) // expected output: ["Banana"]
 console.log(removeFruitStartWithALetter(["Anggur"])) // expected output: []
-console.log(removeFruitStartWithALetter("Mengkudu", "Pisang")) // expected output: ["Mengkudu", "Pisang"]
+console.log(removeFruitStartWithALetter(["Mengkudu", "Pisang"])) // expected output: ["Mengkudu", "Pisang"]
 
 /**
  * sample input: ["Apple", "Orange", "Banana"]
@@ -460,7 +462,9 @@ console.log(removeFruitStartWithALetter("Mengkudu", "Pisang")) // expected outpu
  */
 
 function sumOfArray(arr) {
-
+  let arrSum = 0;
+  arr.forEach((num)=> arrSum += num);
+  return arrSum;
 }
 
 console.log(sumOfArray([3, 0, 9])) // expected output: 12
