@@ -31,7 +31,17 @@
  */
 
 
-let nilai_student;
+let nilai_student = [
+  { nama: "Andi", kelas: "12-IPA-A", nilai: 90},
+  { nama: "Dila", kelas: "12-IPA-A", nilai: 35},
+  { nama: "Udin", kelas: "12-IPA-A", nilai: 67},
+  { nama: "Nina", kelas: "12-IPA-B", nilai: 80},
+  { nama: "Nani", kelas: "12-IPA-B", nilai: 73},
+  { nama: "Jali", kelas: "12-IPA-B", nilai: 98},
+  { nama: "Farah", kelas: "12-IPA-C", nilai: 76},
+  { nama: "Dini", kelas: "12-IPA-C", nilai: 81},
+  { nama: "Dina", kelas: "12-IPA-C", nilai: 87},
+];
 
 console.log(nilai_student)
 
@@ -43,10 +53,9 @@ console.log(nilai_student)
  * 
  */
 
-let student_tidak_lulus_kelas_A;
-let student_tidak_lulus_kelas_B;
-let student_tidak_lulus_kelas_C;
-
+let student_tidak_lulus_kelas_A = nilai_student.filter(d => d.nilai < 70 && d.kelas === "12-IPA-A").map(d => d.nama);
+let student_tidak_lulus_kelas_B = nilai_student.filter(d => d.nilai < 70 && d.kelas === "12-IPA-B").map(d => d.nama);
+let student_tidak_lulus_kelas_C = nilai_student.filter(d => d.nilai < 70 && d.kelas === "12-IPA-C").map(d => d.nama);
 
 /**
  * 
@@ -54,11 +63,9 @@ let student_tidak_lulus_kelas_C;
  * 
  * 
  */
-
-let rata_rata_kelas_A;
-let rata_rata_kelas_B;
-let rata_rata_kelas_C;
- 
+let rata_rata_kelas_A = nilai_student[0].nilai + nilai_student[1].nilai + nilai_student[2].nilai / 3;
+let rata_rata_kelas_B = nilai_student[3].nilai + nilai_student[4].nilai + nilai_student[5].nilai / 3;
+let rata_rata_kelas_C = nilai_student[6].nilai + nilai_student[7].nilai + nilai_student[8].nilai / 3;
 
 
 /**
@@ -365,19 +372,19 @@ let rata_rata_kelas_C;
 
 
 // Nama company dari Glenna Reichert
-console.log(users[]) // lengkapi
+console.log(users[8].company.name) // lengkapi
 
 // Aktivitas tidak produktif Ervin Howell yang dilakukan tiap Jumat
-console.log(users[])
+console.log(users[1].activities[1].activities[2])
 
-// Zipcode dari Ervin Howell
-console.log(users[])
+// // Zipcode dari Ervin Howell
+console.log(users[1].address.zipcode)
 
-// Leanne Graham melakukan coding setiap hari apa?
-console.log(users[])
+// // Leanne Graham melakukan coding setiap hari apa?
+console.log(users[0].activities[0].activities[1])
 
-// Geolocation (latitude, longitude) dari alamat Clementina DuBuque adalah
-console.log(users[], users[])
+// // Geolocation (latitude, longitude) dari alamat Clementina DuBuque adalah
+console.log(users[9].address.geo.lat, users[9].address.geo.lng)
 
 
 
