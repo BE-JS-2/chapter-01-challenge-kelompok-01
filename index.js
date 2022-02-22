@@ -31,7 +31,10 @@
  */
 
 
-let nilai_student;
+let nilai_student = [{
+  Kelas: 'A',
+
+}] ;
 
 console.log(nilai_student)
 
@@ -477,13 +480,13 @@ console.log(sumOfArray([])) // expected output: 0
 /**
  * Lengkapi function berikut untuk menambah 1 setiap elemen yang ada di dalam array
  */
-function plusOne(arr) {
-
+ function plusOne(arr) {
+  return Array.from(arr, x => ++x);
 }
 
 console.log(plusOne([3, 6, 7])) // expected output: [4, 7, 8]
 console.log(plusOne([0, 8, 9])) // expected output: [1, 9, 10]
-console.log(sumOfArray([])) // expected output: []
+console.log(plusOne([])) // expected output: []
 
 
 /**
@@ -529,7 +532,7 @@ console.log(countDiscount(50000, 20)) // expected output: 40000
  */
 
 function removeAllNumber(arr) {
-
+  return d = [...arr1||[], ...arr2||[], ...arr3||[]]
 }
 
 
