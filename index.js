@@ -392,7 +392,8 @@ console.log(users[], users[])
 
 
  function convertTime(seconds) {
-
+   let change = seconds / 60
+   return change;
 }
 
 
@@ -413,8 +414,13 @@ console.log(convertTime(153)) // expected output: 02:33
 
 
 function iLoveFruit(fruits) {
-
+  for (i=0; i<fruits.length; i++) {
+    console.log("Aku Suka Buah " + fruits[i])
+  }
+  
 }
+
+console.log(iLoveFruit(["apple","orange","banana"]))
 
 
 /**
