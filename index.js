@@ -364,20 +364,20 @@ let rata_rata_kelas_C;
 ]
 
 
-// Nama company dari Glenna Reichert
-console.log(users[]) // lengkapi
+// // Nama company dari Glenna Reichert
+// console.log(users[]) // lengkapi
 
-// Aktivitas tidak produktif Ervin Howell yang dilakukan tiap Jumat
-console.log(users[])
+// // Aktivitas tidak produktif Ervin Howell yang dilakukan tiap Jumat
+// console.log(users[])
 
-// Zipcode dari Ervin Howell
-console.log(users[])
+// // Zipcode dari Ervin Howell
+// console.log(users[])
 
-// Leanne Graham melakukan coding setiap hari apa?
-console.log(users[])
+// // Leanne Graham melakukan coding setiap hari apa?
+// console.log(users[])
 
-// Geolocation (latitude, longitude) dari alamat Clementina DuBuque adalah
-console.log(users[], users[])
+// // Geolocation (latitude, longitude) dari alamat Clementina DuBuque adalah
+// console.log(users[], users[])
 
 
 
@@ -512,7 +512,16 @@ console.log(joinArray([], [8, 2], [6, 4])) // expected output: [8, 2, 6, 4]
  */
 
 
-function countDiscount(harga_awal, persen_diskon) {
+
+ function countDiscount(harga_awal, persen_diskon) {
+
+  var diskon;
+  var harga_akhir;
+
+  diskon = harga_awal * persen_diskon / 100;
+  harga_akhir = harga_awal - diskon;
+
+  return harga_akhir;
 
 }
 
